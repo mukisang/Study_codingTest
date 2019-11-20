@@ -1,18 +1,19 @@
-time_line=[(1,4),(3,5),(0,6),(5,7),(3,8),(5,9),(6,10),(8,11),(8,12),(12,14)]
+# time_line=[(1,4),(3,5),(0,6),(5,7),(3,8),(5,9),(6,10),(8,11),(8,12),(2,13),(12,14)]
 result_line=[]
-num=11
+# num=11
 
-'''
+
 time_line=[]
 num2=input()
 num=int(num2)
+print(num)
 for i in range(num):
     print(i)
-    #t1,t2=map(int,input('3°ú¸ñÀÇ °ªÀÔ·Â).split()
+    #t1,t2=map(int,input('3Â°ÃºÂ¸Ã±Ã€Ã‡ Â°ÂªÃ€Ã”Â·Ã‚).split()
     t1,t2=input().split(" ")
     t=(int(t1),int(t2))
     time_line.append(t)
-'''
+
 time_line.sort(key=lambda t:t[0], reverse=False)
 
 print(time_line) 
@@ -29,7 +30,7 @@ while len(time_line)>0:
             print((t1,t2),"deleted")
             time_line=time_line[:time_line.index((t1,t2))]+time_line[time_line.index((t1,t2))+1:]
             if len(time_line)==0:
-            	break
+                break
     
 print(result_line)
 print(len(result_line))
