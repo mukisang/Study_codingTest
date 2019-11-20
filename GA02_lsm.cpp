@@ -7,28 +7,22 @@ using namespace std;
 int main()
 {
 	
-	//동전을 1~50000원 규칙이 아닐 경우 이를 사용한다.
-	/*int* co = new int[cn]; 
-	for (int i = 0; i < cn; i++)
-	{
-		cin >> co[i];
-	}*/
-
-	int cn = 0, price = 0, ck=0;//cn 은 동전의 갯수 price는 가치의 합, ck는 check변수
+	int price = 0, ck=0;//cn 은 동전의 갯수 price는 가치의 합, ck는 check변수
 	int coin_count = 0;
 	/*cn = 10; price = 28495;*/
-	int co[10] = { 1,5,10,50,100,500,1000,5000,10000,50000 };
+	int co[6] = { 1,5,10,50,100,500};
 
 	//값을 입력받는 과정 범위 내가 아닐 경우 프로그램 종료
-	cin >> cn >>price;
-	if (cn > 10 || cn < 1 || price < 1 || price>100000000)
+	cin >> price;
+
+	if (price < 1 || price>1000)
 		return 0;
 	//아래 지폐를 찾지 못할때 즉 가장 큰 동전보다 클때 가장 큰 동전으로 초기값 설정
-	ck = cn - 1;
+	price = 1000 - price;
 	
 	
 	//가장 가까운 지폐 찾는 과정
-	for (int i = 0; i < cn; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		if (co[i] - price > 0)
 		{
