@@ -36,23 +36,14 @@ int main() {
 	}
 	        
 	//받은 숫자가 30의 배수가 맞나 판단하는 과정.
-	int ck = 0, ck2 = 0;;
+	sort(ar, ar + length, greater<int>());
 	for (int i = 0; i < length; i++)
 	{
-		if (!ar[i]) ck++;
-		ck2 += ar[i];
+		result *= 10;
+		result += ar[i];
 	}
-	if (ck2 % 3 != 0 || (!ck))result = -1;
-	else
-	{
-		cout << "성공" << endl;
-		sort(ar, ar + length, greater<int>());
-		for (int i = 0; i < length; i++)
-		{
-				result *= 10;
-				result += ar[i];
-		}
-	}
+	if (!(result/30))result = -1;
+	
 	//정답 출력
 	cout << "정답은 " << result << endl;
 }
