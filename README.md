@@ -10,5 +10,5 @@ ex) [0104] solve hash1
 - branch 명
 [이름]
 이상묵 - muki
-정준혁 -
+정준혁 - junhyuk
 최다인 - chedda
