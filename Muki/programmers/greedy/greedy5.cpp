@@ -13,7 +13,6 @@ bool compare(vector<int>& a, vector<int>& b)
 		return false;
 }
 
-
 int getParent(int node, vector<int>& check) {
 	if (check[node] == node) return node;
 	return getParent(check[node], check);
